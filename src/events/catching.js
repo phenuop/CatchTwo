@@ -246,7 +246,33 @@ module.exports = async (client, guildId, message) => {
             }
           });
       }
-    } else if (message.content.startsWith("Please pick a starter pokémon")) {
+    } else if (config.behavior.Daycare && message.content.includes("in the datcare have produced a")) {
+  try {
+    const words = message.content.split(" ");
+    let pokemonNumbers = [];
+
+    for (let i = 0; i < words.length; i++) {
+      if (words[i] === "No." && words[i + 1]) {
+        let num = "";
+        for (let char of words[i + 1]) {
+          if (char >= "0" && char <= "9") {
+            num += char;
+          }
+        }
+        if (num) {
+          pokemonNumbers.push(num);
+        }
+      }
+    }
+
+    for (const num of pokemonNumbers) {
+      await sleep(300);
+      message.channel.send(`<@716390085896962058> daycare add ${num}`); //add the pokemon to daycare
+    }
+  } catch (err) {
+    console.error(err);
+  }
+  } else if (message.content.startsWith("Please pick a starter pokémon")) {
       // Handle starter Pokémon selection
       let starters = ["bulbasaur", "charmander", "squirtle"];
       await wait(300);
