@@ -60,6 +60,7 @@ If you need any support, please join [our Discord server](https://discord.gg/tXa
 | ```prefix```  | ```String``` | ```undefined```  | The prefix to use for the selfbot. |
 | ```globalCatch```  | ```Boolean``` | ```False```  | Tells the program whether to catch just in the specified guild, or in all (unblacklisted) guilds. |
 | ```blacklistedGuilds```  | ```Array``` | ```716390832034414685```  | The server IDs of servers you do not want the bot to catch in. |
+| ```daycare```  | ```Boolean``` | ```False```  | Tells the program whether or not to add back pokemons to daycare after they lay an egg. |
 
 <h2 align="left">Commands</h2>
 
