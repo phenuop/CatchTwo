@@ -5,7 +5,8 @@ const config = {
     AI: true, // Enable or disable AI behavior
     Sleeping: false, // Enable or disable sleeping behavior
     Catching: true, // Enable or disable catching behavior (CURRENTLY GLOBAL)
-    Spamming: true // Enable or disable spamming behavior (CURRENTLY GLOBAL)
+    Spamming: true, // Enable or disable spamming behavior (CURRENTLY GLOBAL)
+    Daycare: false //Enable or disable daycare system behavior
   },
   // Incense settings
   incense: {
